@@ -1,27 +1,32 @@
 package com.MikeRosends.springapi.service;
 
+import com.MikeRosends.springapi.model.Expense;
 import com.MikeRosends.springapi.model.User;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class UserService {
 
     private List<User> userList;
+    private List<Expense> expensesList;
 
     public UserService() {
         userList = new ArrayList<>();
+        expensesList = new ArrayList<>();
 
-        User user1 = new User(1, "Mike", 25, "mike@mail.com");
-        User user2 = new User(2, "Pete", 35, "pete@mail.com");
-        User user3 = new User(3, "Bia", 20, "bia@mail.com");
-        User user4 = new User(4, "tommy", 30, "tommy@mail.com");
+        Expense expense1 = new Expense(1, "BJJ", 43);
+        Expense expense2 = new Expense(2, "Food", 50);
+        Expense expense3 = new Expense(3, "Code4All Contract", 143);
 
-        userList.addAll(Arrays.asList(user1, user2, user3, user4));
+
+        expensesList.addAll(Arrays.asList(expense1, expense2, expense3));
+
+        User user1 = new User(1, expensesList);
+        User user2 = new User(2, expensesList);
+
+        userList.addAll(Arrays.asList(user1, user2));
     }
 
     public Optional<User> getUser(Integer id) {

@@ -1,17 +1,18 @@
 package com.MikeRosends.springapi.model;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class User {
 
     private int id;
-    private String name;
-    private int age;
-    private String email;
+    private List<Expense> expenses;
 
-    public User(int id, String name, int age, String email) {
+
+    public User(int id, List<Expense> expenses) {
         this.id = id;
-        this.name = name;
-        this.age = age;
-        this.email = email;
+        this.expenses = expenses;
     }
 
     public int getId() {
@@ -22,27 +23,11 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public List<Expense> getExpenses() {
+        return expenses;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setExpenses(List<Expense> expenses) {
+        this.expenses = expenses;
     }
 }
