@@ -1,25 +1,22 @@
 package com.MikeRosends.springapi.model;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class User {
 
     private int id;
     private String name;
-    private List<Expense> expenses;
-    private List<Wishlist> wishlist;
     private List<Deposit> deposits;
+    private List<Expense> expenses;
+    private List<WishlistItem> wishlist;
 
 
-    public User(int id, String name, List<Deposit> deposits, List<Expense> expenses, List<Wishlist> wishlist) {
+    public User(int id, String name, List<Deposit> deposits, List<Expense> expenses, List<WishlistItem> wishlist) {
         this.id = id;
         this.name = name;
         this.deposits = deposits;
         this.expenses = expenses;
         this.wishlist = wishlist;
-        this.deposits = deposits;
     }
 
     public int getId() {
@@ -54,11 +51,11 @@ public class User {
         this.expenses = expenses;
     }
 
-    public List<Wishlist> getWishlist() {
+    public List<WishlistItem> getWishlist() {
         return wishlist;
     }
 
-    public void setWishlist(List<Wishlist> wishlist) {
+    public void setWishlist(List<WishlistItem> wishlist) {
         this.wishlist = wishlist;
     }
 }

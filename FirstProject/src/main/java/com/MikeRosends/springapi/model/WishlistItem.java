@@ -1,12 +1,12 @@
 package com.MikeRosends.springapi.model;
 
-public class Wishlist {
+public class WishlistItem {
 
     private int id;
     private String name;
     private int amount;
 
-    public Wishlist(int id, String name, int amount) {
+    public WishlistItem(int id, String name, int amount) {
         this.id = id;
         this.name = name;
         this.amount = amount;
