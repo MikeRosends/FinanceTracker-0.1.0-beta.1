@@ -99,7 +99,7 @@ public class UserController {
     @ResponseBody
     public Deposit createExpense(@PathVariable Integer userId, @RequestBody Expense expense) {
         Optional<User> user = userService.getUserById(userId);
-        if  (user.isPresent()) {
+        if (user.isPresent()) {
             List<Expense> currentExpenselist = user.get().getExpenses();
             currentExpenselist.add(expense);
             user.get().setExpenses(currentExpenselist);
