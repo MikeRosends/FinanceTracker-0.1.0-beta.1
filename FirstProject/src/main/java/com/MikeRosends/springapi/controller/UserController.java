@@ -82,7 +82,7 @@ public class UserController {
     }
 
     @CrossOrigin(origins = "http://127.0.0.1:8081")
-    @PostMapping("/user/{userId}/deposits")
+    @PostMapping("/user/{userId}/deposit")
     @ResponseBody
     public Deposit createDeposit(@PathVariable Integer userId, @RequestBody Deposit deposit) {
         Optional<User> user = userService.getUserById(userId);
@@ -95,7 +95,7 @@ public class UserController {
     }
 
     @CrossOrigin(origins = "http://127.0.0.1:8081")
-    @PostMapping("/user/{userId}/expenses")
+    @PostMapping("/user/{userId}/expense")
     @ResponseBody
     public Deposit createExpense(@PathVariable Integer userId, @RequestBody Expense expense) {
         Optional<User> user = userService.getUserById(userId);
