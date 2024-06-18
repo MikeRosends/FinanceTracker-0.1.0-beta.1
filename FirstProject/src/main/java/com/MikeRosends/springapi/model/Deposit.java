@@ -4,9 +4,9 @@ public class Deposit {
 
     private int id;
     private String name;
-    private int amount;
+    private double amount;
 
-    public Deposit(int id, String name, int amount) {
+    public Deposit(int id, String name, double amount) {
         this.id = id;
         this.name = name;
         this.amount = amount;
@@ -28,11 +28,11 @@ public class Deposit {
         this.name = name;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 }

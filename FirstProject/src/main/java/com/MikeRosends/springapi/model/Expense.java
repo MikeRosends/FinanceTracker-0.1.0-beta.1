@@ -4,9 +4,9 @@ public class Expense {
 
     private int id;
     private String name;
-    private int amount;
+    private double amount;
 
-    public Expense(int id, String name, int amount) {
+    public Expense(int id, String name, double amount) {
         this.id = id;
         this.name = name;
         this.amount = amount;
@@ -28,11 +28,11 @@ public class Expense {
         this.name = name;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 }

@@ -97,7 +97,7 @@ public class UserController {
     @CrossOrigin(origins = "http://127.0.0.1:8081")
     @PostMapping("/user/{userId}/expense")
     @ResponseBody
-    public Deposit createExpense(@PathVariable Integer userId, @RequestBody Expense expense) {
+    public Expense createExpense(@PathVariable Integer userId, @RequestBody Expense expense) {
         Optional<User> user = userService.getUserById(userId);
         if (user.isPresent()) {
             List<Expense> currentExpenselist = user.get().getExpenses();

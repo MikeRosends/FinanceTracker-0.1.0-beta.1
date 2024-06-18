@@ -32,8 +32,8 @@ public class UserService {
 
 
         deposits = new ArrayList<>();
-        Deposit deposit1 = new Deposit(1, "Salary", 900);
-        Deposit deposit2 = new Deposit(2, "MB-Way", 37);
+        Deposit deposit1 = new Deposit(1, "Salary", 900.50);
+        Deposit deposit2 = new Deposit(2, "MB-Way", 37.65);
         deposits.addAll(Arrays.asList(deposit1, deposit2));
 
         userList = new ArrayList<>();
